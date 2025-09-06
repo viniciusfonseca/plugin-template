@@ -116,32 +116,32 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184"
 
 [[package]]
-name = "plugin-mesh-core"
+name = "plugin-template"
 version = "0.1.0"
-source = "git+https://github.com/viniciusfonseca/plugin-mesh#ba64d23694aebd01f5fcb0fbe8f2796606a14479"
 dependencies = [
- "anyhow",
  "futures",
- "plugin-mesh-macros",
+ "plugind-core",
 ]
 
 [[package]]
-name = "plugin-mesh-macros"
+name = "plugind-core"
 version = "0.1.0"
-source = "git+https://github.com/viniciusfonseca/plugin-mesh#ba64d23694aebd01f5fcb0fbe8f2796606a14479"
+source = "git+https://github.com/viniciusfonseca/plugind#a5bd8eac7c59bb9cc677e1a028bddbc764ad4f79"
+dependencies = [
+ "anyhow",
+ "futures",
+ "plugind-macros",
+]
+
+[[package]]
+name = "plugind-macros"
+version = "0.1.0"
+source = "git+https://github.com/viniciusfonseca/plugind#a5bd8eac7c59bb9cc677e1a028bddbc764ad4f79"
 dependencies = [
  "futures",
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "plugin-template"
-version = "0.1.0"
-dependencies = [
- "futures",
- "plugin-mesh-core",
 ]
 
 [[package]]
