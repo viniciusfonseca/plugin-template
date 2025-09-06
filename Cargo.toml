@@ -1,0 +1,16 @@
+[package]
+name = "plugin-template"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+lto = true
+strip = true
+opt-level = 3
+
+[dependencies]
+futures = "0.3"
+plugin-mesh-core = { git = "https://github.com/viniciusfonseca/plugin-mesh" }
+
+[lib]
+crate-type = ["cdylib"]

@@ -1,0 +1,2 @@
+name = "plugin-template"
+path = "target/release/libplugin_template.so"
