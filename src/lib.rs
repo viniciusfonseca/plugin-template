@@ -1,7 +1,7 @@
-use plugind_core::{context::Context, plugin};
+use plugind_core::{context::{Context, InvokeResult}, plugin};
 
 #[plugin]
-pub async fn init(_: Vec<u8>, _: Context) -> Vec<u8> {
+pub async fn init(_: Vec<u8>, _: Context) -> InvokeResult {
 
-    b"Hello World".to_vec()
+    Ok(b"Hello World".to_vec())
 }
